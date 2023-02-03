@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table border="1">
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>rollnumber</th>
+                <th>language</th>
+                <th>button</th>
+            </tr>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.username}}</td>
+                <td>{{i.rollnumber}}</td>
+                <td>{{i.language}}</td>
+                <td><a href="{{url_for('update',id=i.id)}}">edit</a></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        {{data}}
+        <form method="post" action="{{url_for('update',id=data.id)}}">
+            <input type="number" name="id" value="{{data.id}}" placeholder="enter the id">
+            <input type="text" name="username" value="{{data.username}}" placeholder="enter the username">
+            <input type="number" name="rollnumber" value="{{data.rollnumber}}" placeholder="enter the rollnumber">
+            <input type="text" name="language" value="{{data.language}}" placeholder="enter the language">
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
